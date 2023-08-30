@@ -1,3 +1,8 @@
+This is a Basic Calculator built by Altschool's SOEv2 Circle-23
+
+Circle Lead: Chiamaka548
+Circle co-lead: Ireoluwatomiwaaa
+Members: ChinatuL, Nwachukwu-Ugochi, Mariam Eneji, Deezob, Joseph-Jnr
 <!-- Project Design Dark Mode -->
 <br/>
 <div align="center">
