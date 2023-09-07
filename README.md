@@ -4,7 +4,7 @@ Circle Lead : <a href="https://www.github.com/Chiamaka548">Chiamaka Nwafor</a>
 
 Circle Co-lead: <a href="https://www.github.com/Ireoluwatomiwaaa">Iretomiwa Osunkoya</a>
 
-Circle Members: <a href="https://www.github.com/ChinatuL">Chinatu Lucia Eke</a>, <a href="https://www.github.com/Nwachukwu-Ugochi">Nwachukwu Ugochi</a>, <a href="https://www.github.com/MariamEneji">Mariam Eneji</a>, <a href="https://www.github.com/Deezob">Mama Daniel</a>, <a href="https://www.github.com/Joseph-Jnr">Joseph Junior</a>, <a href="https://www.github.com/Solar-Rays">Ayomide Raymond Solarin</a>
+Circle Members: <a href="https://www.github.com/ChinatuL">Chinatu Lucia Eke</a>, <a href="https://www.github.com/Nwachukwu-Ugochi">Nwachukwu Ugochi</a>, <a href="https://www.github.com/MariamEneji">Mariam Eneji</a>, <a href="https://www.github.com/Deezob">Mama Daniel</a>, <a href="https://www.github.com/Joseph-Jnr">Joseph Junior</a>, <a href="https://www.github.com/Solar-Rays">Ayomide Raymond Solarin</a>, <a href="https://www.github.com/boluwajiOladimeji">Boluwaji Oladimeji</a>
 
 <!-- Project Design Dark Mode -->
 <br/>
