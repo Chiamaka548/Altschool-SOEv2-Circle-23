@@ -5,55 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AltSchool Calculator Assignment(Circle 23)</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main>
+      <!-- <h2>AltSchool Calculator Assignment (circle 23)</h2> -->
       <div class="calculator">
-        <h2>AltSchool Calculator Assignment (circle 23)</h2>
-
         <div class="display-box">
           <input type="text" class="evaluation" />
           <input type="text" class="result" />
         </div>
 
+        <hr>
+
         <div class="btns-container">
           <div>
-            <input type="button" value="C" />
-            <input type="button" value="()" />
-            <input type="button" value="%" />
-            <input type="button" value="/" />
+            <button class="clear-all">AC</button>
+            <button class="operators">()</button>
+            <button class="operators">%</button>
+            <button class="operators">&divide;</button>
           </div>
 
           <div>
-            <input type="button" value="7" />
-            <input type="button" value="8" />
-            <input type="button" value="9" />
-            <input type="button" value="*" />
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operators">&times;</button>
           </div>
 
           <div>
-            <input type="button" value="4" />
-            <input type="button" value="5" />
-            <input type="button" value="6" />
-            <input type="button" value="-" />
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operators">-</button>
           </div>
 
           <div>
-            <input type="button" value="1" />
-            <input type="button" value="2" />
-            <input type="button" value="3" />
-            <input type="button" value="+" />
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operators">+</button>
           </div>
 
-          <div>
+          <div class="last-row">
             <!-- add the image to the button with css. The svg is inside the image folder -->
-            <button class="button-with-image"></button>
-            <input type="button" value="0" />
-            <input type="button" value="." />
-            <input type="button" value="=" />
+            <button class="button-with-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="28" viewBox="0 0 42 28" fill="none">
+                <path d="M19.1578 18.8L29.5789 9.2M19.1578 9.2L29.5789 18.8M16.1044 26H34.7894C36.1714 26 37.4967 25.4943 38.4739 24.5941C39.451 23.6939 40 22.473 40 21.2V6.8C40 5.52696 39.451 4.30606 38.4739 3.40589C37.4967 2.50571 36.1714 2 34.7894 2H16.1044C14.7226 2.00027 13.3975 2.50616 12.4205 3.4064L2.76279 12.3032C2.27438 12.7533 2 13.3636 2 14C2 14.6364 2.27438 15.2467 2.76279 15.6968L12.4205 24.5936C13.3975 25.4938 14.7226 25.9997 16.1044 26Z" stroke="#4E4D4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equal-to">=</button>
           </div>
         </div>
       </div>
+      <p>circle 23</p>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
