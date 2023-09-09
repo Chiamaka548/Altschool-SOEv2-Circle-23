@@ -6,21 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AltSchool Calculator Assignment(Circle 23)</title>
     <link rel="stylesheet" href="style.css" />
+    
+  
   </head>
   <body>
     <main>
       <!-- <h2>AltSchool Calculator Assignment (circle 23)</h2> -->
-      <div class="calculator">
+      <div class="calculator" id="calculator">
+        
+        <div id="modeToggle">
+
+          <button class="toggle-light  toggle" id="toggle-light" >
+            <img src="Images/lightModeIcon.svg" alt="">
+          </button>
+
+          <button class="toggle-dark toggle" id="toggle-dark">
+           <img src="Images/darkModeIcon.svg" alt="">
+          </button>
+                
+          
+          
+      </div>
         <div class="display-box">
-          <input type="text" class="evaluation" value="5+3" disabled="true" />
-          <input type="text" class="result" value="8" disabled="true" />
+          <input type="text" class="evaluation" id="evaluation" value="5+3" disabled="true" />
+          <input type="text" class="result" id="result" value="8" disabled="true" />
         </div>
+
 
         <hr />
 
         <div class="btns-container">
           <div>
-            <button class="calc-btn clear-all">AC</button>
+            <button class="calc-btn clear-all" id="clear-all">AC</button>
             <button class="calc-btn operators">()</button>
             <button class="calc-btn operators">%</button>
             <button class="calc-btn operators">&divide;</button>
@@ -68,7 +85,7 @@
             </button>
             <button class="calc-btn">0</button>
             <button class="calc-btn">.</button>
-            <button class="calc-btn equal-to">=</button>
+            <button class="calc-btn equal-to" id="equal-to">=</button>
           </div>
         </div>
       </div>
