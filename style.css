@@ -21,7 +21,7 @@ main {
   border-radius: 40px;
   padding: 25px 20px 0px 20px;
   background-color: #fff;
-  
+  transition: all 0.3s ease-in;
 }
 
 hr {
@@ -69,7 +69,7 @@ hr {
 }
 
 .footer {
-  color: #FFF;
+  color: #fff;
   font-family: Inter;
   font-size: 13px;
   font-style: normal;
@@ -81,7 +81,7 @@ hr {
   margin: auto;
   padding: 5px 7px 7px 7px;
   border-radius: 5px 5px 0px 0px;
-  background: rgba(255, 89, 89, 0.60);
+  background: rgba(255, 89, 89, 0.6);
 }
 /* End Light Theme */
 
@@ -117,74 +117,68 @@ input:disabled {
 /* End Display */
 
 /* Toggle Buttons */
-#modeToggle{  
-  display: flex;  
-  width: 100%; 
+#modeToggle {
+  display: flex;
+  width: 100%;
   justify-content: center;
-  margin: 0 0 1.5em  0;
-  
+  margin: 0 0 1.5em 0;
 }
 
-.toggle{
-  width: 60px ;
+.toggle {
+  width: 60px;
   height: 34px;
+  cursor: pointer;
 }
 
-.toggle-dark{
-background-color: rgba(243, 243, 243, 1);
-border: #F3F3F3;
-border-radius:  0 9px 9px 0 ;
+.toggle-dark {
+  background-color: rgba(243, 243, 243, 1);
+  border: #f3f3f3;
+  border-radius: 0 9px 9px 0;
 }
 
-.toggle-light{
+.toggle-light {
   background-color: rgba(229, 229, 229, 1);
-  border: #E5E5E5;
+  border: #e5e5e5;
   border-radius: 9px 0 0 9px;
 }
 
 /* Dark Theme */
-.main-dark {
-  background-color: #01071D;
+.dark .main {
+  background-color: #01071d;
 }
 
-.evaluation-dark {
+.dark .evaluation {
   color: #fff;
 }
 
-.btn-dark {
+.dark .calc-btn {
   background: #343434;
   color: #fff;
   box-shadow: 0px 6px 7px 2px rgba(110, 107, 117, 0.55);
 }
 
-.clear-all-dark {
-  background: #FF5959;
+.dark #clear-all {
+  background: #ff5959;
 }
 
-.equal-to-dark {
-  background: #7E7CF6;
+.dark #equal-to {
+  background: #7e7cf6;
 }
 
-.operators-dark{
-  color: #7E7CF6;
+.dark .operators {
+  color: #7e7cf6;
 }
 
-.footer-dark {
-  background: rgba(255, 89, 89, 0.40);
+.dark .footer {
+  background: rgba(255, 89, 89, 0.4);
 }
 
-.light-dark{
-background-color: #0E1327;
+.dark .toggle-light {
+  background-color: #0e1327;
 }
 
-.dark-dark{
-  background-color: #161E3C;
- 
+.dark .toggle-dark {
+  background-color: #161e3c;
 }
 
 /* End Dark Theme */
-
-
-
-
-
