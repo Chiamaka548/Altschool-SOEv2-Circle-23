@@ -9,6 +9,7 @@ body {
     font-family: Inter;
 }
 
+/* light theme  style */
 main {
     width: fit-content;
     height: fit-content;
@@ -25,8 +26,7 @@ hr {
     margin: 25px 0px 15px;
 }
 
-/* light theme  style */
-button {
+.calc-btn {
     width: 73px;
     height: 75px;
     flex-shrink: 0;
@@ -41,7 +41,7 @@ button {
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
-} 
+}
 
 .last-row {
     margin-bottom: 5px;
@@ -65,7 +65,7 @@ button:hover {
     background: #FF5959;
 }
 
-p {
+.footer {
     color: #FFF;
     font-family: Inter;
     font-size: 13px;
@@ -80,7 +80,32 @@ p {
     border-radius: 5px 5px 0px 0px;
     background: rgba(255, 89, 89, 0.60);
 }
+/* End Light Theme */
 
+/* Dark Theme */
+.main-dark {
+    background-color: #01071D;
+}
 
+.btn-dark {
+    background: #343434;
+    color: #fff;
+    box-shadow: 0px 6px 7px 2px rgba(110, 107, 117, 0.55);
+}
 
+.clear-all.btn-dark {
+    background: #FF5959;
+}
 
+.equal-to.btn-dark {
+    background: #7E7CF6;
+}
+
+.operators.btn-dark {
+    color: #7E7CF6;
+}
+
+.footer-dark {
+    background: rgba(255, 89, 89, 0.40);
+}
+/* End Dark Theme */
