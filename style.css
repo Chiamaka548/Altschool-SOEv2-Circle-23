@@ -21,6 +21,7 @@ main {
   border-radius: 40px;
   padding: 25px 20px 0px 20px;
   background-color: #fff;
+  
 }
 
 hr {
@@ -49,9 +50,9 @@ hr {
   margin-bottom: 5px;
 }
 
-button:hover {
+/* button:hover {
   transform: scale(1.1);
-}
+} */
 
 .operators {
   color: #4542ef;
@@ -115,6 +116,32 @@ input:disabled {
 }
 /* End Display */
 
+/* Toggle Buttons */
+#modeToggle{  
+  display: flex;  
+  width: 100%; 
+  justify-content: center;
+  margin: 0 0 1.5em  0;
+  
+}
+
+.toggle{
+  width: 60px ;
+  height: 34px;
+}
+
+.toggle-dark{
+background-color: rgba(243, 243, 243, 1);
+border: #F3F3F3;
+border-radius:  0 9px 9px 0 ;
+}
+
+.toggle-light{
+  background-color: rgba(229, 229, 229, 1);
+  border: #E5E5E5;
+  border-radius: 9px 0 0 9px;
+}
+
 /* Dark Theme */
 .main-dark {
   background-color: #01071D;
@@ -130,19 +157,34 @@ input:disabled {
   box-shadow: 0px 6px 7px 2px rgba(110, 107, 117, 0.55);
 }
 
-.clear-all .btn-dark {
+.clear-all-dark {
   background: #FF5959;
 }
 
-.equal-to .btn-dark {
+.equal-to-dark {
   background: #7E7CF6;
 }
 
-.operators .btn-dark {
+.operators-dark{
   color: #7E7CF6;
 }
 
 .footer-dark {
   background: rgba(255, 89, 89, 0.40);
 }
+
+.light-dark{
+background-color: #0E1327;
+}
+
+.dark-dark{
+  background-color: #161E3C;
+ 
+}
+
 /* End Dark Theme */
+
+
+
+
+
