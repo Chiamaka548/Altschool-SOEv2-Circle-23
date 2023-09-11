@@ -28,3 +28,72 @@ function checkTheme() {
   if (!theme && prefersDarkMode) bodyEl.classList.add('dark');
 }
 checkTheme();
+
+// Calculator Functionality
+const keys = document.querySelector(".btns-container");
+const evaluationDisplay = document.querySelector(".evaluation");
+const resultDisplay = document.querySelector(".result");
+
+keys.addEventListener("click", (e) => {
+    if (e.target.matches("button")) {
+        const key = e.target;
+        const action = key.dataset.action;
+        const keyContent = key.textContent;
+        const evaluation = evaluationDisplay.value;
+        const result = resultDisplay.textContent;
+
+      // number keys
+        if (!action) {
+            if (evaluation == "0" || result !== "0") {
+              evaluationDisplay.value = keyContent;
+              resultDisplay.textContent = "0";
+            } else {
+                evaluationDisplay.value = evaluation + keyContent;
+            }
+        }
+
+      //  operation keys
+        if (
+            action === "add" ||
+            action === "subtract" ||
+            action === "multiply" ||
+            action === "divide"
+        ) {
+            evaluationDisplay.value = evaluation + keyContent;
+            if (result !== "0") {
+                evaluationDisplay.value = result + keyContent;
+                resultDisplay.textContent = "0";
+            }
+        }
+
+        // clear key
+        if (action === "clear") {
+            console.log("clear key!");
+        }
+
+        // percentage key
+        if (action === "percentage") {
+            console.log("percentage key!");
+        }
+
+        // decimal key
+        if (action === "decimal") {
+            console.log("decimal key!");
+      }
+      
+      // square root key
+      if (action === "square-root") {
+        resultDisplay.textContent = Math.sqrt(parseFloat(evaluationDisplay.value));
+      }
+
+        // delete (backspace) key
+        if (action === "delete") {
+            console.log("delete key!");
+        }
+
+        // equals key
+        if (action === "calculate") {
+            console.log("equal key!");
+        }
+    }
+});

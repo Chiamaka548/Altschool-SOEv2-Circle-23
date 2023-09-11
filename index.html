@@ -25,52 +25,46 @@
             type="text"
             class="evaluation"
             id="evaluation"
-            value="5+3"
+            value="0"
             disabled="true"
           />
-          <input
-            type="text"
-            class="result"
-            id="result"
-            value="8"
-            disabled="true"
-          />
+          <div class="result">0</div>
         </div>
 
         <hr />
 
         <div class="btns-container">
           <div>
-            <button class="calc-btn clear-all" id="clear-all">AC</button>
-            <button class="calc-btn operators">()</button>
-            <button class="calc-btn operators">%</button>
-            <button class="calc-btn operators">&divide;</button>
+            <button class="calc-btn clear-all" id="clear-all" data-action="clear">AC</button>
+            <button class="calc-btn operators" data-action="square-root">√</button>
+            <button class="calc-btn operators" data-action="percentage">%</button>
+            <button class="calc-btn operators" data-action="divide">÷</button>
           </div>
 
           <div>
             <button class="calc-btn">7</button>
             <button class="calc-btn">8</button>
             <button class="calc-btn">9</button>
-            <button class="calc-btn operators">&times;</button>
+            <button class="calc-btn operators" data-action="multiply">x</button>
           </div>
 
           <div>
             <button class="calc-btn">4</button>
             <button class="calc-btn">5</button>
             <button class="calc-btn">6</button>
-            <button class="calc-btn operators">-</button>
+            <button class="calc-btn operators" data-action="subtract">-</button>
           </div>
 
           <div>
             <button class="calc-btn">1</button>
             <button class="calc-btn">2</button>
             <button class="calc-btn">3</button>
-            <button class="calc-btn operators">+</button>
+            <button class="calc-btn operators" data-action="add">+</button>
           </div>
 
           <div class="last-row">
             <!-- add the image to the button with css. The svg is inside the image folder -->
-            <button class="calc-btn backspace button-with-image">
+            <button class="calc-btn backspace button-with-image" data-action="delete">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="42"
@@ -88,8 +82,8 @@
               </svg>
             </button>
             <button class="calc-btn">0</button>
-            <button class="calc-btn">.</button>
-            <button class="calc-btn equal-to" id="equal-to">=</button>
+            <button class="calc-btn" data-action="decimal">.</button>
+            <button class="calc-btn equal-to" id="equal-to" data-action="calculate">=</button>
           </div>
         </div>
       </div>
