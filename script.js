@@ -80,7 +80,8 @@ keys.addEventListener("click", (e) => {
 
         // decimal key
         if (action === "decimal") {
-            console.log("decimal key!");
+          evaluationDisplay.value = evaluation + '.';
+          console.log("decimal!");
       }
       
       // square root key
