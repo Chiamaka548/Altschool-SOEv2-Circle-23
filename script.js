@@ -74,6 +74,8 @@ keys.addEventListener("click", (e) => {
         // percentage key
         if (action === "percentage") {
             console.log("percentage key!");
+            percentageResult = evaluationDisplay.value / 100;
+            resultDisplay.textContent = percentageResult;
         }
 
         // decimal key
@@ -95,5 +97,6 @@ keys.addEventListener("click", (e) => {
         if (action === "calculate") {
             console.log("equal key!");
         }
+
     }
 });
