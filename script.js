@@ -100,8 +100,8 @@ keys.addEventListener("click", (e) => {
     }
 
     // equals key
-    if (action === "calculate") {
-      console.log("equal key!");
+    if (action === 'calculate') {
+      console.log('equal key!');
       resultDisplay.textContent = eval(evaluation)
     }
   }
