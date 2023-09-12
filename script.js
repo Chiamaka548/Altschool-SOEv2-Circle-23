@@ -12,7 +12,7 @@ function add() {
 
 function remove() {
   bodyEl.classList.remove("dark");
-  localStorage.setItem("theme", "light");
+  localStorage.setItem("theme", "light"   );
 }
 
 function checkTheme() {
@@ -102,7 +102,9 @@ keys.addEventListener("click", (e) => {
     // equals key
     if (action === 'calculate') {
       console.log('equal key!');
-      resultDisplay.textContent = eval(evaluation)
+      let newEvaluation = evaluation.replace('x', '*')
+      newEvaluation = newEvaluation.replace('÷', '/')
+      resultDisplay.textContent = eval(newEvaluation)
     }
   }
 });
