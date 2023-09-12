@@ -60,6 +60,7 @@ keys.addEventListener("click", (e) => {
       action === "divide"
     ) {
       evaluationDisplay.value = evaluation + keyContent;
+      compute()
       if (result !== "0") {
         evaluationDisplay.value = result + keyContent;
         resultDisplay.textContent = "0";
@@ -101,6 +102,7 @@ keys.addEventListener("click", (e) => {
     // equals key
     if (action === "calculate") {
       console.log("equal key!");
+      resultDisplay.textContent = eval(evaluation)
     }
   }
 });
