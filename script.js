@@ -68,7 +68,8 @@ keys.addEventListener("click", (e) => {
 
         // clear key
         if (action === "clear") {
-            console.log("clear key!");
+            console.log("clear keys input added !");
+
         }
 
         // percentage key
