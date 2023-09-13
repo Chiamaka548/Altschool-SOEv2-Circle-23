@@ -83,9 +83,11 @@ keys.addEventListener("click", (e) => {
 
     // decimal key
     if (action === "decimal") {
+      if (!evaluation.includes('.')) {
       evaluationDisplay.value = evaluation + ".";
       console.log("decimal!");
     }
+  }
 
     // square root key
     if (action === "square-root") {
