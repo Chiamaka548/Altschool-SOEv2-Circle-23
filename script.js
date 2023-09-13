@@ -95,8 +95,9 @@ keys.addEventListener("click", (e) => {
     }
 
     // delete (backspace) key
-    if (action === "delete") {
-      console.log("delete key!");
+    if (action === 'delete' && evaluation.length > 0) {
+      evaluationDisplay.value = evaluation.slice(0, -1);
+      console.log('delete key!');
     }
 
     // equals key
