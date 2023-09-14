@@ -84,21 +84,14 @@ keys.addEventListener("click", (e) => {
         evaluationDisplay.value = result;
       };
       const percentageResult = parseFloat(evaluationDisplay.value / 100);
-      resultDisplay.textContent = percentageResult || "Error!"
+      resultDisplay.textContent = percentageResult || "Syntax Error"
 
       calculator.dataset.previousKeyType = "percentage";
     }
 
     // decimal key
     if (action === "decimal") {
-      if (!evaluation.includes('.')) {
         evaluationDisplay.value = evaluation + ".";
-        console.log("decimal!");
-      }
-
-      if (previousKeyType === "operator") {
-          evaluationDisplay.value = evaluation + "0.";
-      }
 
       calculator.dataset.previousKeyType = "decimal";
     }
@@ -110,7 +103,7 @@ keys.addEventListener("click", (e) => {
       };
       resultDisplay.textContent = Math.sqrt(
         parseFloat(evaluationDisplay.value)
-      ) || "Error!";
+      ) || "Syntax Error";
 
       calculator.dataset.previousKeyType = "square-root";
     }
@@ -130,7 +123,7 @@ keys.addEventListener("click", (e) => {
         eval(newEvaluation)
       } catch (err) {
         if (err instanceof SyntaxError) {
-          resultDisplay.textContent = "Error!"
+          resultDisplay.textContent = "Syntax Error"
           return
         }
       }
