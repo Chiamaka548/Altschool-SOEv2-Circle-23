@@ -40,31 +40,17 @@ keys.addEventListener('click', (e) => {
     const key = e.target;
     const action = key.dataset.action;
     const keyContent = key.textContent;
-    const evaluation = evaluationDisplay.value;
+    const evaluation = evaluationDisplay.textContent;
     const result = resultDisplay.textContent;
-    const previousKeyType = calculator.dataset.previousKeyType;
-    console.log(action);
-
-    // checking evaluation length
-    if (evaluation.length >= 10) {
-      if (
-        action !== 'clear' &&
-        action !== 'square-root' &&
-        action !== 'percentage' &&
-        action !== 'delete'
-      )
-        return;
-    }
 
     // number keys
     if (!action) {
       if (evaluation == '0' || result !== '0') {
-        evaluationDisplay.value = keyContent;
+        evaluationDisplay.textContent = keyContent;
         resultDisplay.textContent = '0';
       } else {
-        evaluationDisplay.value = evaluation + keyContent;
+        evaluationDisplay.textContent = evaluation + keyContent;
       }
-      calculator.dataset.previousKeyType = 'number';
     }
 
     //  operation keys
@@ -74,58 +60,69 @@ keys.addEventListener('click', (e) => {
       action === 'multiply' ||
       action === 'divide'
     ) {
-      evaluationDisplay.value = evaluation + keyContent;
+      if (
+        Number(resultDisplay.textContent) === 0 &&
+        evaluationDisplay.textContent === ''
+      )
+        return;
+      evaluationDisplay.textContent = evaluation + keyContent;
       if (result !== '0') {
-        evaluationDisplay.value = result + keyContent;
+        evaluationDisplay.textContent = result + keyContent;
         resultDisplay.textContent = '0';
       }
-      calculator.dataset.previousKeyType = 'operator';
     }
 
     // clear key
     if (action === 'clear') {
-      evaluationDisplay.value = '';
+      evaluationDisplay.textContent = '';
       resultDisplay.textContent = '0';
-
-      calculator.dataset.previousKeyType = 'clear';
     }
 
     // percentage key
     if (action === 'percentage') {
+      if (
+        Number(resultDisplay.textContent) === 0 &&
+        evaluationDisplay.textContent === ''
+      )
+        return;
       if (result != 0) {
-        evaluationDisplay.value = result;
+        evaluationDisplay.textContent = result;
       }
-      const percentageResult = parseFloat(evaluationDisplay.value / 100);
+      const percentageResult = parseFloat(evaluationDisplay.textContent / 100);
       resultDisplay.textContent = percentageResult || 'Syntax Error';
-
-      calculator.dataset.previousKeyType = 'percentage';
     }
 
     // decimal key
     if (action === 'decimal') {
-      evaluationDisplay.value = evaluation + '.';
-
-      calculator.dataset.previousKeyType = 'decimal';
+      evaluationDisplay.textContent = evaluation + '.';
     }
 
     // square root key
     if (action === 'square-root') {
+      if (
+        Number(resultDisplay.textContent) === 0 &&
+        evaluationDisplay.textContent === ''
+      )
+        return;
       if (result != 0) {
-        evaluationDisplay.value = result;
+        evaluationDisplay.textContent = result;
       }
-      let answer = Math.sqrt(parseFloat(evaluationDisplay.value));
+      let answer = Math.sqrt(parseFloat(evaluationDisplay.textContent));
       resultDisplay.textContent = answer.toFixed(2) || 'Syntax Error';
-      calculator.dataset.previousKeyType = 'square-root';
     }
 
     // delete (backspace) key
     if (action === 'delete' && evaluation.length > 0) {
-      evaluationDisplay.value = evaluation.slice(0, -1);
-      calculator.dataset.previousKeyType = 'delete';
+      evaluationDisplay.textContent = evaluation.slice(0, -1);
     }
 
     // equals key
     if (action === 'calculate') {
+      if (
+        Number(resultDisplay.textContent) === 0 &&
+        evaluationDisplay.textContent === ''
+      )
+        return;
       let newEvaluation = evaluation.replaceAll('x', '*');
       newEvaluation = newEvaluation.replaceAll('÷', '/');
 
@@ -140,24 +137,15 @@ keys.addEventListener('click', (e) => {
 
       let answer = eval(newEvaluation);
 
-      if (answer.toString().slice('').includes('.')) {
-        console.log('yes');
-        answer = Number(answer.toFixed(8));
-      }
-
-      if (
-        answer.toString().length > 11 &&
-        !answer.toString().slice('').includes('.')
-      ) {
-        answer = 'Infinity Error';
-      }
-
       resultDisplay.textContent = answer;
+    }
 
-      // if (result.indexOf('.') !== -1)
-      //   resultDisplay.textContent = Math.round(eval(newEvaluation));
-
-      calculator.dataset.previousKeyType = 'calculate';
+    if (window.innerWidth >= 550) {
+      if (evaluationDisplay.textContent.length > 13) {
+        evaluationDisplay.style.fontSize = '2rem';
+      } else {
+        evaluationDisplay.style.fontSize = '3rem';
+      }
     }
   }
 });
