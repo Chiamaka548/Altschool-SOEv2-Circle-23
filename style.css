@@ -103,8 +103,9 @@ svg {
   text-align: right;
   font-size: 1.5rem;
   border: none;
-  display: flex;
-  flex-wrap: wrap;
+  align-self: flex-end;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 .result {
@@ -118,9 +119,6 @@ svg {
   justify-items: center;
 }
 
-input:disabled {
-  background-color: inherit;
-}
 /* End Display */
 
 /* Toggle Buttons */
