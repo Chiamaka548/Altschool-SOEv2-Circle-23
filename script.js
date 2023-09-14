@@ -45,6 +45,7 @@ keys.addEventListener('click', (e) => {
     const previousKeyType = calculator.dataset.previousKeyType;
     console.log(action);
 
+    // checking evaluation length
     if (evaluation.length >= 10) {
       if (
         action !== 'clear' &&
