@@ -30,6 +30,7 @@ function checkTheme() {
 checkTheme();
 
 // Calculator Functionality
+const calculator = document.querySelector(".calculator");
 const keys = document.querySelector(".btns-container");
 const evaluationDisplay = document.querySelector(".evaluation");
 const resultDisplay = document.querySelector(".result");
@@ -41,6 +42,7 @@ keys.addEventListener("click", (e) => {
     const keyContent = key.textContent;
     const evaluation = evaluationDisplay.value;
     const result = resultDisplay.textContent;
+    const previousKeyType = calculator.dataset.previousKeyType;
 
     // number keys
     if (!action) {
@@ -50,6 +52,7 @@ keys.addEventListener("click", (e) => {
       } else {
         evaluationDisplay.value = evaluation + keyContent;
       }
+      calculator.dataset.previousKeyType = "number";
     }
 
     //  operation keys
@@ -60,54 +63,80 @@ keys.addEventListener("click", (e) => {
       action === "divide"
     ) {
       evaluationDisplay.value = evaluation + keyContent;
-      compute()
       if (result !== "0") {
         evaluationDisplay.value = result + keyContent;
         resultDisplay.textContent = "0";
       }
+      calculator.dataset.previousKeyType = "operator";
     }
 
     // clear key
     if (action === "clear") {
       evaluationDisplay.value = " ";
       resultDisplay.textContent = "0";
-      console.log("clear key!");
+      
+      calculator.dataset.previousKeyType = "clear";
     }
 
     // percentage key
     if (action === "percentage") {
-      console.log("percentage key!");
-      percentageResult = evaluationDisplay.value / 100;
-      resultDisplay.textContent = percentageResult;
+      if (result != 0) {
+        evaluationDisplay.value = result;
+      };
+      const percentageResult = parseFloat(evaluationDisplay.value / 100);
+      resultDisplay.textContent = percentageResult || "Error!"
+
+      calculator.dataset.previousKeyType = "percentage";
     }
 
     // decimal key
     if (action === "decimal") {
       if (!evaluation.includes('.')) {
-      evaluationDisplay.value = evaluation + ".";
-      console.log("decimal!");
+        evaluationDisplay.value = evaluation + ".";
+        console.log("decimal!");
+      }
+
+      if (previousKeyType === "operator") {
+          evaluationDisplay.value = evaluation + "0.";
+      }
+
+      calculator.dataset.previousKeyType = "decimal";
     }
-  }
 
     // square root key
     if (action === "square-root") {
+      if (result != 0) {
+        evaluationDisplay.value = result;
+      };
       resultDisplay.textContent = Math.sqrt(
         parseFloat(evaluationDisplay.value)
-      );
+      ) || "Error!";
+
+      calculator.dataset.previousKeyType = "square-root";
     }
 
     // delete (backspace) key
     if (action === 'delete' && evaluation.length > 0) {
       evaluationDisplay.value = evaluation.slice(0, -1);
-      console.log('delete key!');
+      calculator.dataset.previousKeyType = "delete";
     }
 
-    // equals key
+        // equals key
     if (action === 'calculate') {
-      console.log('equal key!');
       let newEvaluation = evaluation.replace('x', '*')
       newEvaluation = newEvaluation.replace('÷', '/')
+
+      try {
+        eval(newEvaluation)
+      } catch (err) {
+        if (err instanceof SyntaxError) {
+          resultDisplay.textContent = "Error!"
+          return
+        }
+      }
       resultDisplay.textContent = eval(newEvaluation)
+
+      calculator.dataset.previousKeyType = "calculate"
     }
   }
 });
