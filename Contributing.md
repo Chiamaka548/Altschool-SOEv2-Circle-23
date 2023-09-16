@@ -1,4 +1,4 @@
-# Contributions
+Contributions
 https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/1 
 https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/2
 https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/3
