@@ -1,1 +1,24 @@
 # Contributions
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/1 
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/2
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/3
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/4
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/5
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/6
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/7
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/8
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/9
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/10
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/11
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/12
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/13
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/14
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/15
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/16
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/17
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/18
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/19
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/20
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/21
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/22
+https://github.com/Chiamaka548/Altschool-SOEv2-Circle-23-Calculator/pull/23
